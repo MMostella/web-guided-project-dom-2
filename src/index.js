@@ -73,6 +73,17 @@ cancelButton.addEventListener('click', cancel);
 // the user hits the Escape key on their keyboard.
 // Add it as an event listener for 'keydown' events on document.
 
+//Two ways to declare functions in JS
+//function Expression ::: const name = function(){}
+//Function Declaration ::: function name(){} -> hoisted
+
+function escKey(event){
+    if (event.key === 'Escape'){
+        modal.classList.add('off');
+    }
+}
+
+document.addEventListener('keydown', escKey);
 
 // 👉 TASK 7- Add to ALL ELEMENTS ON THE PAGE an event listener for click events.
 // It should console.log the target 🎯 of the event.
